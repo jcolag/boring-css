@@ -1,0 +1,130 @@
+main {
+  font-size: 1.25em;
+  line-height: 1.75;
+  margin: auto;
+  max-width: 70ch;
+  padding: 3em 1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 3em 0 1em;
+}
+
+p,ul,ol {
+  margin-bottom: 2em;
+  font-family: sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base03: #002b36;
+    --base02: #073642;
+    --base01: #586e75;
+    --base0: #657b83;
+    --base1: #839496;
+    --base2:  #93a1a1;
+    --base3: #eee8d5;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--green);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--cyan);
+  }
+}
+
+@media (prefers-color-scheme: light), @media (prefers-color-scheme: no-preference) {
+  :root {
+    --base3: #93a1a1;
+    --base2: #839496;
+    --base1: #657b83;
+    --base00: #586e75;
+    --base91: #073642;
+    --base02:  #002b36;
+    --base03: #eee8d5;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--red);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--blue);
+  }
+}
+
+body {
+  background-color: var(--base03);
+  color: var(--base0);
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+  font-family: serif;
+}
+
+b, i, strong, em, blockquote, q {
+  color: var(--base1);
+}
+
+a {
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--red);
+}
+
+a:visited {
+  color: var(--violet);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th, hr {
+  border: 2px solid var(--base02);
+}
+
+caption, th {
+  background: var(--base0);
+  color: var(--base03);
+}
+
+img {
+  border-radius: 5%;
+}
+
+button, input, optgroup, select, textarea {
+	background: var(--base2);
+	border: 1px solid var(--violet);
+	color: var(--base02);
+}
+
+embed, fieldset, iframe, object {
+	border: 2px solid var(--violet);
+}
+
+mark {
+  background: var(--yellow);
+}
