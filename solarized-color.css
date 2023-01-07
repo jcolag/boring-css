@@ -1,3 +1,6 @@
+/* Uses colors from https://ethanschoonover.com/solarized/, licensed
+ * under the terms of the MIT license.
+ */
 @media (prefers-color-scheme: dark) {
   :root {
     --base03: #002b36;
