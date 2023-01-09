@@ -51,8 +51,8 @@ td, th, hr {
 }
 
 caption, th {
-  background: var(--base0);
-  color: var(--base03);
+  background-color: var(--base0);
+  color: var(--base3);
 }
 
 img {
