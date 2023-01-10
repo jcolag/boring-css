@@ -1,0 +1,58 @@
+/* Uses (mostly) standard CSS colors.  Most people won't want to use
+ * this, except as an example for their own color scheme.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base03: black;
+    --base02: #2b2b2b;
+    --base01: #555555;
+    --base0: gray;
+    --base1: #ababab;
+    --base2:  #c3c3c3;
+    --base3: white;
+    --yellow: yellow;
+    --orange: orange;
+    --red: red;
+    --magenta: magenta;
+    --violet: violet;
+    --blue: lightblue;
+    --cyan: cyan;
+    --green: green;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--green);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--cyan);
+  }
+}
+
+@media (prefers-color-scheme: light), @media (prefers-color-scheme: no-preference) {
+  :root {
+    --base03: white;
+    --base02: #c3c3c3;
+    --base01: #ababab;
+    --base0: gray;
+    --base1: #555555;
+    --base2:  #2b2b2b;
+    --base3: black;
+    --yellow: yellow;
+    --orange: orange;
+    --red: red;
+    --magenta: magenta;
+    --violet: violet;
+    --blue: blue;
+    --cyan: cyan;
+    --green: green;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--red);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--blue);
+  }
+}
