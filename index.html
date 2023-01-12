@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boring CSS Tests</title>
+  <script type="text/javascript">
+    /* This code exists for the purposes of making the example
+    work.  I can't say that I recommend dynamically loading a
+    CSS file onto a webpage for any other reason... */
+    function changeCss(cssId, filename) {
+      const head = document.getElementsByTagName('head')[0];
+      const css = document.getElementById(cssId);
+      const link = document.createElement('link');
+
+      if (css) {
+        head.removeChild(css);
+      }
+
+      if (filename.indexOf('-') === 0) {
+        return;
+      }
+
+      link.id = cssId;
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = filename;
+      link.media = 'all';
+      head.appendChild(link);
+    }
+    function changeBase() {
+      const list = document.getElementById('change-base');
+      const val = list.selectedOptions[0].value;
+
+      changeCss('base-css', val === '' ? '-' : val);
+    }
+    function changeColor() {
+      const list = document.getElementById('change-color');
+      const val = list.selectedOptions[0].value;
+
+      changeCss('color-css', `./${val}-color.css`);
+    }
+    function changeLang() {
+      const list = document.getElementById('change-lang');
+      const val = list.selectedOptions[0].value;
+
+      changeCss('lang-css', `./${val}-language.css`);
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Boring CSS Tests</h1>
+    <p>
+      Specifically, this page tests
+      <a href="https://github.com/jcolag/boring-css">Boring CSS</a>,
+      rather than providing CSS tests that happen to not inspire
+      excitement.  When you first open this page, it has no
+      stylesheet at all.  You can apply the individual styles and see
+      how they interact with the page elements.
+      The Base CSS doesn&rsquo;t handle much on its own, other than
+      spacing.  It does specify colors, but until you supply a color
+      palette, it doesn't know what they are.
+      Likewise, the color palette (mostly) only applies names to
+      colors, for the other stylesheets to work with.
+      <form>
+        <fieldset>
+          <label for="change-base">Use Base CSS?</label>
+          <select id="change-base" onchange="changeBase()">
+            <option value="">No</option>
+            <option value="base.css">Yes</option>
+          </select>
+          <br>
+          <label for="change-color">Color</label>
+          <select id="change-color" onchange="changeColor()">
+            <option value="">No color scheme</option>
+            <option value="html">HTML</option>
+            <option value="nord">Nord</option>
+            <option value="solarized">Solarized</option>
+          </select>
+          <br>
+          <label for="change-lang">Design Language</label>
+          <select id="change-lang" onchange="changeLang()">
+            <option value="">No design language</option>
+            <option value="material">Material</option>
+          </select>
+        </fieldset>
+      </form>
+      You might also want to open the browser's developer tools
+      to toggle the light- and dark-color palettes.
+    </p>
+    <h2>A Form</h2>
+    <p>
+      This only shows a subset of the possible variety of form
+      elements, to avoid over-complicating the example page.  If
+      you find any that the CSS fails to cover, please file an
+      issue.
+    </p>
+    <form>
+      <fieldset>
+        <p>
+          <label for="email-addr">E-Mail Address</label>
+          <input
+            id="email-addr"
+            placeholder="name@email.com"
+            required
+            type="email"
+          >
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input
+            id="password"
+            placeholder="Type a password"
+            required
+            type="password"
+          >
+        </p>
+        <p>
+          <label for="number">Pick a Number</label>
+          <input id="number" placeholder="Enter a number" type="number">
+        </p>
+        <p>
+          <label for="cb">
+            <input id="cb" type="checkbox">
+            <span>Remember Me?</span>
+          </label>
+        </p>
+        <p>
+          <label for="file">Add a File</label>
+          <input id="file" type="file">
+        </p>
+        <fieldset>
+          <legend>Operation</legend>
+          <label for="radio1">
+            <input id="radio1" name="op" type="radio" checked="checked">
+            <span>On</span>
+          </label>
+          <label for="radio2">
+            <input id="radio2" name="op" type="radio">
+            <span>Off</span>
+          </label>
+          <label for="radio3">
+            <input id="radio3" name="op" type="radio">
+            <span>Intermittent</span>
+          </label>
+        </fieldset>
+        <p>
+          <button type="submit">Go!</button>
+          <button type="reset">Never Mind...</button>
+          <button type="button" disabled="disabled">Nothing</button>
+        </p>
+      </fieldset>
+    </form>
+    <h2>Some Information</h2>
+    <p>
+      This looks like a <b>table</b> of <s>junk</s><i>data</i> to
+      <u>look</u> at.
+    </p>
+    <h3>The Table</h3>
+    <p>Here it is&hellip;</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Heading</th>
+          <th>Heading</th>
+          <th>Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data</td>
+          <td>Data</td>
+          <td>Data</td>
+        </tr>
+        <tr>
+          <td>Data</td>
+          <td>Data</td>
+          <td>Data</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>And there you have it</p>
+    <h4>Exceptions</h4>
+    <p>
+      You&rsquo;ll want to keep the old quote in mind, with this
+      data.
+    </p>
+    <blockquote>
+      <p>It ain&rsquo;t over &rsquo;til it&rsquo;s over.</p>
+      <cite>Yogi Berra</cite>
+    </blockquote>
+    <h4>Generating the Data</h4>
+    <p>If you want more data, run the following.</p>
+    <code>
+      10 PRINT "DATA"<br>
+      20 GOTO 10
+    </code>
+    <p>You can run it for as much data as you want.</p>
+    <h5>Kittens?</h5>
+    <img
+      alt="A cat-in-the-box"
+      src="./assets/cat-chest.jpg"
+      title="Released as CC0 at https://pxhere.com/en/photo/500088"
+    >
+    <h6>Why Cats</h6>
+    <p>There&rsquo;s a cat picture above, because&hellip;</p>
+    <ul>
+      <li>I like cats</li>
+      <li>I needed an excuse to use:</li>
+      <ul>
+        <li>All six levels of heading</li>
+        <li>A bulleted list</li>
+      </ul>
+    </ul>
+  </main>
+</body>
+</html>
+
