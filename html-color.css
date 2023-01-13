@@ -1,5 +1,9 @@
 /* Uses (mostly) standard CSS colors.  Most people won't want to use
  * this, except as an example for their own color scheme.
+ *
+ * Note that I release this file under the CC0 public domain
+ * dedication.  Feel free to "clone" it to fit your corporate or
+ * personal branding guidelines.
  */
 @media (prefers-color-scheme: dark) {
   :root {
