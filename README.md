@@ -22,6 +22,8 @@ Currently, `base.css` contains my current set of "universal styles," applying to
 
 As a result, a web app can load the universal styles, a color palette, and---once they exist---a design language, and have a "good enough" design.  I might not love Nord or Material Design, for example, but using CSS that implements them well at least looks professional enough to not need to worry for a while.
 
+[Try it!](https://jcolag.github.io/boring-css/)
+
 ### Caveats
 
 Note that these stylesheets will not implement any design language *fully*, for a few reasons.
@@ -45,6 +47,7 @@ Like any CSS, link the stylesheets from any page headers.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       href="./base.css"
+      media="screen"
       rel="stylesheet"
       type="text/css"
     >
@@ -72,9 +75,9 @@ Personally, I would recommend using `base.css` unless you have a different stand
 
 Regardless, with those three stylesheets in place, developers can add their favorite grid system, fonts, animations, and bespoke styles, as needed.
 
-I'll repeat, though:  If you have the urge to use CSS classes for non-semantic reasons, for whatever reason, then you've probably outgrown the need for a project like this.  If you want an `a` link, an `img`, or a `div` to look like a button, this system will only frustrate you.
+I'll repeat, though:  If you have the urge to use CSS classes for non-semantic reasons, for whatever reason, then you've probably outgrown the need for a project like this.  If you want an `a` link, an `img`, or a `div` to look like a button, this system will only frustrate you.  I also wouldn't recommend using this for a production application, given that you'll probably need the entirety of a consistent design language, and don't want to run around implementing everything *except* standard HTML widgets.
 
 ## Contributing
 
-Please do!  If you want to fix some oversight on my part (I can't possibly have caught every HTML element), add a standard palette (provided that you can fill in all fifteen colors for both modes) that I might have overlooked, or implement a design language, I'd greatly appreciate it.
+Please do!  If you want to fix some oversight on my part (I can't possibly have caught every HTML element), a standard palette (provided that you can fill in all fifteen colors for both modes) that I might have overlooked, or implement a design language, I'd greatly appreciate it.  Although, you know the drill:  Be nice to people, and so forth.
 
