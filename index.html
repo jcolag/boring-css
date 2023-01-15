@@ -21,11 +21,11 @@
         return;
       }
 
+      link.href = filename;
       link.id = cssId;
+      link.media = 'all';
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = filename;
-      link.media = 'all';
       head.appendChild(link);
     }
     function changeBase() {
