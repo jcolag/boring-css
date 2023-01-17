@@ -64,7 +64,12 @@ img {
   border-radius: 5%;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+input::file-selector-button,
+optgroup,
+select,
+textarea {
 	background: var(--base2);
 	border: 1px solid var(--violet);
 	color: var(--base02);
