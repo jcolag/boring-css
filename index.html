@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fiendish.github.io/gh-fork-banner/gh.css">
   <title>Boring CSS Tests</title>
   <script type="text/javascript">
     /* This code exists for the purposes of making the example
@@ -49,6 +50,11 @@
   </script>
 </head>
 <body>
+  <span id="gh">
+    <a href="https://github.com/jcolag/boring-css">
+      Fork&nbsp;on&nbsp;GitHub...
+    </a>
+  </span>
   <main>
     Let&rsquo;s go.
     <hr>
@@ -67,6 +73,7 @@
       colors, for the other stylesheets to work with.
       <form>
         <fieldset>
+          <legend>Real Configuration</legend>
           <label for="change-base">Use Base CSS?</label>
           <select id="change-base" onchange="changeBase()">
             <option value="">No</option>
@@ -101,6 +108,7 @@
     </p>
     <form>
       <fieldset>
+        <legend>Bogus Form Fields</legend>
         <label for="email-addr">E-Mail Address</label>
         <input
           id="email-addr"
@@ -205,6 +213,13 @@
       </ul>
     </ul>
     <hr>
+    <p>
+      The link to GitHub comes via
+      <a href="https://github.com/fiendish/gh-fork-banner">
+        gh-fork-banner
+      </a>,
+      made available under the GPL v3.
+    </p>
   </main>
 </body>
 </html>

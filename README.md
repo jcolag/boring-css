@@ -33,6 +33,8 @@ Note that these stylesheets will not implement any design language *fully*, for 
  * Default icon sets get downloaded externally.  It makes no sense to maintain copies of everything here.
  * I could easily miss an obscure HTML element that I rarely use, or an uncommon interaction.
 
+It also won't *precisely* match every color palette, because not every palette has seven base colors and eight highlight colors.  For example, the Nord color scheme interpolates a few of the highlight colors, meaning that a purist wouldn't call it the same palette.
+
 Like I hinted earlier, this repository doesn't have aspirations far beyond "good enough with minimal work."  If a prototype looks more acceptable than an unstyled page, then the stylesheets have done their jobs.  Make your own badge, or move to a more thorough implementation of the design language.
 
 ## Usage
@@ -71,9 +73,9 @@ Like any CSS, link the stylesheets from any page headers.
 </html>
 ```
 
-Personally, I would recommend using `base.css` unless you have a different standard.  Then pick one of the color palette stylesheets, such as `html-color.css`, for the least-interesting choice.  Next, pick a design language, such as `material-design.css`.  And then you do...*nothing*.  You do actually need to use HTML controls for their intended purposes, though, plus you'll want to wrap checkbox and radio button text in a `span` element.  Most importantly, since these styles don't come as classes, they shouldn't ever interfere with additional styles.
+Personally, I would recommend using `base.css` unless you have a different standard.  Then pick one of the color palette stylesheets, such as `html-color.css`, for the least-interesting choice.  Next, pick a design language, such as `material-design.css`.  And then you do...*nothing*.  OK, yes, you do actually need to use HTML controls for their intended purposes, though, plus you'll want to wrap checkbox and radio button text in a `span` element.
 
-Regardless, with those three stylesheets in place, developers can add their favorite grid system, fonts, animations, and bespoke styles, as needed.
+Regardless, with those three stylesheets in place, developers can add their favorite grid system, fonts, animations, and bespoke styles, as needed.  You can also build on top of this:  Since these styles don't come as classes, they shouldn't ever interfere with additional styles.
 
 I'll repeat, though:  If you have the urge to use CSS classes for non-semantic reasons, for whatever reason, then you've probably outgrown the need for a project like this.  If you want an `a` link, an `img`, or a `div` to look like a button, this system will only frustrate you.  I also wouldn't recommend using this for a production application, given that you'll probably need the entirety of a consistent design language, and don't want to run around implementing everything *except* standard HTML widgets.
 
