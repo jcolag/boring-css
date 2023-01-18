@@ -1,0 +1,343 @@
+/* This stylesheet attempts to simulate a hand-drawn design language,
+ * particularly to signal that a prototype won't work like a
+ * finished product.  Ideally, one might pair this with quirky
+ * handwriting fonts.
+ */
+
+*:disabled {
+  filter: brightness(80%) blur(0.66px);
+  text-decoration: line-through;
+}
+
+*:disabled:hover {
+  transform: translate(0, 0) rotate(0deg);
+}
+
+button,
+fieldset,
+input,
+input::file-selector-button,
+select {
+  background: transparent;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  color: var(--base1);
+  margin: 0.5em;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+}
+
+button:nth-child(2n+1),
+fieldset:nth-child(2n),
+input:nth-child(2n+1),
+select:nth-child(2n+1) {
+	border-bottom-left-radius: 125px 214px;
+	border-bottom-right-radius: 115px 55px;
+	border-top-right-radius: 55px 215px;
+	border-top-left-radius: 215px 25px;
+}
+
+button[type="reset"],
+input[type="reset"] {
+  border: solid 3px var(--red);
+  color: var(--red);
+}
+
+button[type="submit"],
+input[type="submit"] {
+  border: solid 3px var(--green);
+  color: var(--green);
+}
+
+button:hover,
+input::file-selector-button:hover {
+  box-shadow: 2px 8px 4px -6px var(--base03);
+  transform: translate(-0.1em, -0.1em) rotate(1deg);
+}
+
+hr {
+	border: 2px dotted var(--blue);
+	filter: blur(1px);
+	transform: rotate(-1deg);
+}
+
+img {
+	border-bottom-right-radius: 60px 125px;
+	border-bottom-left-radius: 125px 725px;
+	border-top-left-radius: 55px 125px;
+	border-top-right-radius: 455px 75px;
+}
+
+img:nth-child(2n) {
+	border-bottom-right-radius: 55px 125px;
+	border-bottom-left-radius: 455px 75px;
+	border-top-left-radius: 60px 125px;
+	border-top-right-radius: 125px 725px;
+}
+
+input:invalid,
+input:out-of-range {
+  border: 2px dashed var(--red) !important;
+}
+
+table {
+  border-collapse: unset;
+}
+
+td {
+  border-bottom-right-radius: 125px 55px;
+  border-bottom-left-radius: 75px 455px;
+  border-top-left-radius: 355px 60px;
+  border-top-right-radius: 65px 325px;
+}
+
+td:nth-child(2n) {
+  border-bottom-left-radius: 355px 60px;
+  border-bottom-right-radius: 65px 325px;
+  border-top-right-radius: 125px 55px;
+  border-top-left-radius: 75px 455px;
+}
+
+th {
+  border-bottom-right-radius: 325px 45px;
+  border-bottom-left-radius: 35px 155px;
+  border-top-left-radius: 555px 60px;
+  border-top-right-radius: 65px 25px;
+}
+
+th:nth-child(2n) {
+  border-bottom-left-radius: 325px 45px;
+  border-bottom-right-radius: 35px 155px;
+  border-top-right-radius: 555px 60px;
+  border-top-left-radius: 65px 25px;
+}
+
+ul {
+  list-style-type: "- ";
+}
+
+ul > ul {
+  list-style-type: "ↄ ";
+}
+
+ul > ul > ul {
+  list-style-type: "╯ ";
+}
+
+/* Checkboxes */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type="checkbox"]:not(.filled-in) + span::after {
+	border: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+[type="checkbox"] + span::before,
+[type="checkbox"]:not(.filled-in) + span::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1em;
+	height: 1em;
+	z-index: 0;
+	border: 0.2em solid var(--base1);
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+	margin-top: 0.1875em;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+[type="checkbox"] + span {
+	position: relative;
+	padding-left: 2.2em;
+	cursor: pointer;
+	display: inline-block;
+	height: 1.5em;
+	line-height: 1.5em;
+	font-size: 1rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+[type="checkbox"]:not(.filled-in) + span::after {
+	border: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+[type="checkbox"]:checked + span::before {
+	top: -0.33em;
+	left: -0.3125em;
+	width: 0.75em;
+	height: 1.375em;
+	border-top: 0.125em solid transparent;
+	border-left: 0.125em solid transparent;
+	border-right: 0.125em solid var(--cyan);
+	border-bottom: 0.125em solid var(--cyan);
+  border-bottom-right-radius: 225px 55px;
+  border-bottom-left-radius: 85px 255px;
+  border-top-left-radius: 255px 95px;
+  border-top-right-radius: 95px 225px;
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+[type="checkbox"]:indeterminate + span::before {
+	top: -0.6875em;
+	left: -0.75em;
+	width: 0.625em;
+	height: 1.375em;
+	border-top: none;
+	border-left: none;
+	border-right: 0.125em solid #26a69a;
+	border-bottom: none;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+[type="checkbox"]:not(:checked):disabled + span::before {
+	border: none;
+	background-color: rgba(0,0,0,0.42);
+}
+
+/* Radio Buttons */
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type="radio"]:checked + span::after {
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+}
+
+[type="radio"]:checked + span::after,
+[type="radio"].with-gap:checked + span::after {
+	background-color: var(--cyan);
+  border-bottom-right-radius: 225px 95px;
+  border-bottom-left-radius:95px 255px;
+  border-top-left-radius: 255px 95px;
+  border-top-right-radius: 95px 225px;
+}
+
+[type="radio"]:checked + span::after,
+[type="radio"].with-gap:checked + span::before,
+[type="radio"].with-gap:checked + span::after {
+	border: 0.125em solid var(--cyan);
+  border-bottom-right-radius: 225px 25px;
+  border-bottom-left-radius: 55px 255px;
+  border-top-left-radius: 255px 85px;
+  border-top-right-radius: 15px 225px;
+}
+
+[type="radio"] + span::before,
+[type="radio"] + span::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0.25em;
+	width: 1em;
+	height: 1em;
+	z-index: 0;
+	-webkit-transition: .28s ease;
+	transition: .28s ease;
+}
+
+[type="radio"]:checked + span::before {
+	border: 0.125em solid transparent;
+}
+
+[type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
+	position: relative;
+	padding-left: 2.2em;
+	cursor: pointer;
+	display: inline-block;
+	height: 1.5em;
+	line-height: 1.5em;
+	font-size: 1rem;
+	-webkit-transition: .28s ease;
+	transition: .28s ease;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+[type="radio"]:checked + span::before {
+	border: 0.125em solid transparent;
+}
+
+[type="radio"] + span::before,
+[type="radio"] + span::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -0.1em;
+	margin: 0.25em;
+	width: 1em;
+	height: 1em;
+	z-index: 0;
+	-webkit-transition: .28s ease;
+	transition: .28s ease;
+}
+
+[type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
+	cursor: pointer;
+	line-height: 1.5em;
+	font-size: 1rem;
+}
+
+[type="radio"]:not(:checked) + span::before,
+[type="radio"]:not(:checked) + span::after {
+	border: 0.125em solid var(--base1);
+  border-bottom-right-radius: 225px 95px;
+  border-bottom-left-radius: 95px 255px;
+  border-top-left-radius: 255px 95px;
+  border-top-right-radius: 95px 225px;
+}
+
