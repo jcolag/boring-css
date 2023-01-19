@@ -1,0 +1,58 @@
+/* Uses colors from https://draculatheme.com/ licensed under the
+ * terms of the MIT license.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base03: #282a36;
+    --base02: #363848;
+    --base01: #44475a;
+    --base0: #6272a4;
+    --base1: #94828d;
+    --base2:  #c6bdbf;
+    --base3: #f8f8f2;
+    --yellow: #f1fa8c;
+    --orange: #ffb86c;
+    --red: #ff5555;
+    --magenta: #ff79c6;
+    --violet: #bd93f9;
+    --blue: lightblue;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--green);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--cyan);
+  }
+}
+
+@media (prefers-color-scheme: light), @media (prefers-color-scheme: no-preference) {
+  :root {
+    --base03: #f8f8f2;
+    --base02: #c6bdbf;
+    --base01: #94828d;
+    --base0: #6272a4;
+    --base1: #44475a;
+    --base2:  #363848;
+    --base3: #282a36;
+    --yellow: #f1fa8c;
+    --orange: #ffb86c;
+    --red: #ff5555;
+    --magenta: #ff79c6;
+    --violet: #bd93f9;
+    --blue: lightblue;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--red);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--blue);
+  }
+}
