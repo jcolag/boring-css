@@ -18,6 +18,13 @@ input::file-selector-button {
 	overflow: visible;
 }
 
+button:active,
+input:active,
+input::file-selector-button:active {
+  border-style: inset;
+	filter: brightness(80%) saturate(80%);
+}
+
 button,
 input,
 input::file-selector-button,
@@ -60,6 +67,15 @@ input[type="reset"]:hover,
 input[type="submit"]:hover,
 input::file-selector-button {
   filter: brightness(125%);
+}
+
+button:hover:active,
+input[type="button"]:hover:active,
+input[type="reset"]:hover:active,
+input[type="submit"]:hover:active,
+input::file-selector-button {
+  border-style: inset;
+	filter: brightness(80%) saturate(80%);
 }
 
 /* Checkboxes */

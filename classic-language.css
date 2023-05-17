@@ -53,6 +53,15 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background: var(--base0);
+  border-style: inset;
+}
+
+button:hover:active,
+input[type="button"]:hover:active,
+input[type="reset"]:hover:active,
+input[type="submit"]:hover:active,
+input::file-selector-button {
+  border-style: inset;
 }
 
 label:has(input[type="checkbox"]),
