@@ -72,7 +72,7 @@ select,
 textarea {
 	background: var(--base2);
 	border: 1px solid var(--violet);
-	color: var(--base02);
+	color: var(--base0);
 }
 
 embed, fieldset, iframe, object {
