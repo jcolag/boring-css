@@ -18,6 +18,7 @@
     --blue: #268bd2;
     --cyan: #2aa198;
     --green: #859900;
+    accent-color: var(--magenta);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -46,6 +47,7 @@
     --blue: #268bd2;
     --cyan: #2aa198;
     --green: #859900;
+    accent-color: var(--yellow);
   }
 
   h1, h2, h3, h4, h5, h6 {

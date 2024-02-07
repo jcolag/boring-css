@@ -22,6 +22,7 @@
     --blue: lightblue;
     --cyan: cyan;
     --green: green;
+    accent-color: var(--magenta);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -50,6 +51,7 @@
     --blue: blue;
     --cyan: cyan;
     --green: green;
+    accent-color: var(--yellow);
   }
 
   h1, h2, h3, h4, h5, h6 {
