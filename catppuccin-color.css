@@ -1,0 +1,61 @@
+/* Uses (mostly) colors from the Catppuccin theme
+ * https://github.com/catppuccin/catppuccin
+ * made available under the terms of the MIT license.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base03: #4c4f69;
+    --base02: #5c5f77;
+    --base01: #6c6f85;
+    --base0: #7c7f93;
+    --base1: #acb0be;
+    --base2:  #ccd0da;
+    --base3: #eff1f5;
+    --yellow: #df8e1d;
+    --orange: #fe640b;
+    --red: #d20f39;
+    --magenta: #8839ef;
+    --violet: #7287fd;
+    --blue: #1e66f5;
+    --cyan: #179299;
+    --green: #40a02b;
+    accent-color: var(--magenta);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--blue);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--green);
+  }
+}
+
+@media (prefers-color-scheme: light), @media (prefers-color-scheme: no-preference) {
+  :root {
+    --base03: #eff1f5;
+    --base02: #ccd0da;
+    --base01: #acb0be;
+    --base0: #7c7f93;
+    --base1: #6c6f85;
+    --base2:  #5c5f77;
+    --base3: #4c4f69;
+    --yellow: #df8e1d;
+    --orange: #fe640b;
+    --red: #d20f39;
+    --magenta: #8839ef;
+    --violet: #7287fd;
+    --blue: #1e66f5;
+    --cyan: #179299;
+    --green: #40a02b;
+    accent-color: var(--yellow);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--orange);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--green);
+  }
+}
