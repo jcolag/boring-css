@@ -1,0 +1,61 @@
+/* Uses (mostly) colors from the Rosé Pine theme
+ * https://github.com/rose-pine/rose-pine-theme
+ * made available under the terms of the MIT license.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base03: #232136;
+    --base02: #f2e9e1;
+    --base01: #9893a5;
+    --base0: #797593;
+    --base1: #6e6a86;
+    --base2:  #393552;
+    --base3: #faf4ed;
+    --yellow: #ecf677;
+    --orange: #f6c177;
+    --red: #eb6f92;
+    --magenta: #e4a7e7;
+    --violet: #c4a7e7;
+    --blue: #9cb1d8;
+    --cyan: #9ccfd8;
+    --green: #31748f;
+    accent-color: var(--violet);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--blue);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--cyan);
+  }
+}
+
+@media (prefers-color-scheme: light), @media (prefers-color-scheme: no-preference) {
+  :root {
+    --base03: #faf4ed;
+    --base02: #393552;
+    --base01: #6e6a86;
+    --base0: #797593;
+    --base1: #9893a5;
+    --base2:  #f2e9e1;
+    --base3: #232136;
+    --yellow: #ecf677;
+    --orange: #f6c177;
+    --red: #eb6f92;
+    --magenta: #e4a7e7;
+    --violet: #c4a7e7;
+    --blue: #9cb1d8;
+    --cyan: #9ccfd8;
+    --green: #31748f;
+    accent-color: var(--orange);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--orange);
+  }
+
+  code, kbd, pre, samp {
+    color: var(--blue);
+  }
+}
