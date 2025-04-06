@@ -1,0 +1,31 @@
+/* Uses colors from https://uchu.style/ licensed under the
+ * terms of the Unilicense.
+ */
+:root {
+  color-scheme: light dark;
+    --base03: light-dark(oklch(95.57% 0.003 286.35), oklch(25.11% 0.006 258.36));
+    --base02: light-dark(oklch(88.28% 0.003 286.34), oklch(69.01% 0.003 286.32));
+    --base01: light-dark(oklch(80.73% 0.002 247.84), oklch(69.01% 0.003 286.32));
+    --base0: oklch(75.03% 0.002 247.85);
+    --base1: light-dark(oklch(69.01% 0.003 286.32), oklch(80.73% 0.002 247.84));
+    --base2: light-dark(oklch(69.01% 0.003 286.32), oklch(88.28% 0.003 286.34));
+    --base3: light-dark(oklch(56.82% 0.004 247.89), oklch(95.57% 0.003 286.35));
+    --yellow: light-dark(oklch(75.84% 0.122 92.21), oklch(90.92% 0.125 92.56));
+    --orange: light-dark(oklch(78.75% 0.14163582809066333 54.32911089172009), oklch(63.8% 0.142 52.1));
+    --red: light-dark(oklch(49.95% 0.195 18.34), oklch(62.73% 0.209 12.37));
+    --magenta: light-dark(oklch(46.36% 0.188 338.415), oklch(60.60% 0.195 337.215));
+    --violet: light-dark(oklch(42.77% 0.181 298.49), oklch(58.47% 0.181 302.06));
+    --blue: light-dark(oklch(47.36% 0.185 259.89), oklch(62.39% 0.181 258.33));
+    --cyan: light-dark(oklch(55.81% 0.180 202.405), oklch(70.86% 0.180 201.975));
+    --green: light-dark(oklch(64.24% 0.175 144.92), oklch(79.33% 0.179 145.62));
+    accent-color: var(--yellow);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--magenta);
+}
+
+code, kbd, pre, samp {
+  color: var(--red);
+}
+
