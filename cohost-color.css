@@ -1,0 +1,32 @@
+/* Adapts colors from Cohost
+ * https://web.archive.org/web/20250107061912/https://cohost.org/internet-janitor/post/7811116-if-you-want-to-easil
+ * "...just don't pretend you're" Cohost.
+ */
+:root {
+  color-scheme: light dark;
+    --base03: light-dark(hsl(32.3,100%,97.5%), hsl(32.3,0%,9.8%));
+    --base02: light-dark(hsl(32.3,80%,80%), hsl(32.3,20%,27.34%));
+    --base01: light-dark(hsl(32.3,60%,62.42%), hsl(32.3,40%,44.88%));
+    --base0: light-dark(hsl(32.3,0%,9.8%), hsl(32.3,100%,97.5%));
+    --base1: light-dark(hsl(32.3,40%,44.88%), hsl(32.3,60%,62.42%));
+    --base2: light-dark(hsl(32.3,20%,27.34%), hsl(32.3,80%,80%));
+    --base3: light-dark(hsl(32.3,0%,9.8%), hsl(32.3,100%,97.5%));
+    --yellow: light-dark(hsl(33.1,100%,82.9%), hsl(33.1,100%,17.1%));
+    --orange: light-dark(hsl(29.1,100%,68%), hsl(29.1,100%,32%));
+    --red: light-dark(hsl(358,70.1%,65.9%), hsl(358,70.1%,34.1%));
+    --magenta: light-dark(hsl(333.2,56%,32.9%), hsl(333.2,56%,67.1%));
+    --violet: light-dark(hsl(263,70.1%,34.9%), hsl(263,70.1%,65.1%));
+    --blue: light-dark(hsl(228,70.1%,34.9%), hsl(228,70.1%,65.1%));
+    --cyan: light-dark(hsl(163,70.1%,65.9%), hsl(163,70.1%,34.1%));
+    --green: light-dark(hsl(98,70.1%,65.9%), hsl(98,70.1%,34.1%));
+    accent-color: var(--yellow);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--magenta);
+}
+
+code, kbd, pre, samp {
+  color: var(--red);
+}
+
