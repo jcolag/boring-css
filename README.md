@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 # Boring CSS
 A set of CSS files (for me) to use for prototyping
 
